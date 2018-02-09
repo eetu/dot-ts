@@ -4,9 +4,18 @@ import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
 export default function configureStore(/*initialState: RootState*/) {
-  return createStore(
+  const store = createStore(
     rootReducer,
     // initialState,
     applyMiddleware(thunk),
   );
+
+  if (module.hot) {
+    module.hot.accept('../reducers', () => {
+      const nextRootReducer = require('../reducers').default;
+      store.replaceReducer(nextRootReducer);
+    });
+  }
+
+  return store;
 }
