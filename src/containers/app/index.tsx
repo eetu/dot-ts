@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
-import { connect, Provider } from 'react-redux';
+import { connect, Provider, Store } from 'react-redux';
 import { Route } from 'react-router';
 import { ConnectedRouter } from 'react-router-redux';
 
@@ -9,9 +9,11 @@ import Dot from '../../components/dot';
 import { RootState } from '../../reducers/index';
 import { DotState } from '../../reducers/dot';
 
+import { History } from 'history';
+
 interface AppComponentProps {
-  store: object;
-  history: object;
+  store: Store<{}>;
+  history: History;
   dot: DotState;
   dotActions: typeof actions;
 }
