@@ -1,20 +1,24 @@
 import * as React from 'react';
 import { DotState } from '../../reducers/dot';
 import { actions } from '../../actions/dot';
+import { TranslationFunction } from 'react-i18next';
 
 import './index.css';
 
 interface DotComponentProps {
   state: DotState;
   actions: typeof actions;
+  t: TranslationFunction;
 }
 
-const Dot: React.StatelessComponent<DotComponentProps> = (props: DotComponentProps) => (
+const Dot: React.StatelessComponent<DotComponentProps> = (
+  props: DotComponentProps,
+) => (
   <div>
     <div>
-      dots: <span className="Dot">{props.state.dots}</span>
+      {props.t('dotsLabel')}: <span className="Dot">{props.state.dots}</span>
     </div>
-    <button onClick={props.actions.add}>Add dots</button>
+    <button onClick={props.actions.add}>{props.t('addDotLabel')}</button>
   </div>
 );
 
