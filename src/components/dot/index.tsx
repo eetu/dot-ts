@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { DotState } from '../../reducers/dot';
 import { actions } from '../../actions/dot';
 import i18n from '../../i18n';
