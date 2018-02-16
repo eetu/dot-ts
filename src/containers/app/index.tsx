@@ -3,7 +3,7 @@ import { bindActionCreators, Dispatch } from 'redux';
 import { connect, Provider, Store } from 'react-redux';
 import { Route } from 'react-router';
 import { ConnectedRouter } from 'react-router-redux';
-import { translate, TranslationFunction } from 'react-i18next';
+import { translate, TranslationFunction, Trans } from 'react-i18next';
 
 import * as dotActs from '../../actions/dot';
 import Dot from '../../components/dot';
@@ -34,6 +34,9 @@ class App extends React.Component<AppComponentProps> {
             render={() => (
               <div>
                 <Dot actions={dotActions} state={dot} t={t} />
+                <Trans i18nKey="languageButtonsLabel">
+                  <p>Use these buttons to change the language:</p>
+                </Trans>
                 <button onClick={langActions.langFi}>fi</button>
                 <button onClick={langActions.langEn}>en</button>
               </div>

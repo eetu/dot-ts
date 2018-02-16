@@ -1,4 +1,5 @@
 {
-  "dotsLabel": "Pisteet",
-  "addDotLabel": "Lisää"
+  "Dots": "Pisteet",
+  "Add": "Lisää",
+  "languageButtonsLabel": "<0>Vaihda kieltä näistä napeista:</0>"
 }

@@ -16,9 +16,9 @@ const Dot: React.StatelessComponent<DotComponentProps> = (
 ) => (
   <div>
     <div>
-      {props.t('dotsLabel')}: <span className="Dot">{props.state.dots}</span>
+      {props.t('Dots')}: <span className="Dot">{props.state.dots}</span>
     </div>
-    <button onClick={props.actions.add}>{props.t('addDotLabel')}</button>
+    <button onClick={props.actions.add}>{props.t('Add')}</button>
   </div>
 );
 
