@@ -1,7 +1,7 @@
 import * as types from './types';
 
 export type DotActions = {
-  DOT_ADD: {
+  [types.DOT_ADD]: {
     type: typeof types.DOT_ADD,
   },
 };
