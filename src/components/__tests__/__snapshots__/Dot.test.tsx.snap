@@ -3,7 +3,8 @@
 exports[`Dot should render 1`] = `
 <div>
   <div>
-    dots: 
+    Dots
+    : 
     <span
       className="Dot"
     >
@@ -13,7 +14,7 @@ exports[`Dot should render 1`] = `
   <button
     onClick={[Function]}
   >
-    Add dots
+    Add
   </button>
 </div>
 `;
