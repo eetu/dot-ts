@@ -1,12 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import createHistory from 'history/createBrowserHistory';
+import { I18nextProvider } from 'react-i18next';
 
 import './index.css';
 
 import App from './containers/app';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
+import i18n from './i18n';
 
 const store = configureStore();
 const history = createHistory();
@@ -14,8 +16,10 @@ const history = createHistory();
 // tslint:disable-next-line
 const render = (Component: any) => {
   ReactDOM.render(
-    <Component store={store} history={history} />,
-    document.getElementById('root')
+    <I18nextProvider i18n={i18n}>
+      <Component store={store} history={history} />
+    </I18nextProvider>,
+    document.getElementById('root'),
   );
 };
 
