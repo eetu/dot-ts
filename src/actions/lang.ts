@@ -1,10 +1,10 @@
 import * as types from './types';
 
 export type LangActions = {
-  LANG_FI: {
+  [types.LANG_FI]: {
     type: typeof types.LANG_FI;
   };
-  LANG_EN: {
+  [types.LANG_EN]: {
     type: typeof types.LANG_EN;
   };
 };
