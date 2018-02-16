@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dot should render 1`] = `
+<div>
+  <div>
+    dots: 
+    <span
+      className="Dot"
+    >
+      
+    </span>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Add dots
+  </button>
+</div>
+`;
