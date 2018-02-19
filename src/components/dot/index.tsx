@@ -1,14 +1,15 @@
 import * as React from 'react';
+import { TranslationFunction } from 'i18next';
 
 import { DotState } from '../../reducers/dot';
 import { actions } from '../../actions/dot';
-import i18n from '../../i18n';
 
 import './index.css';
 
 interface DotComponentProps {
   state: DotState;
   actions: typeof actions;
+  t: TranslationFunction;
 }
 
 const Dot: React.StatelessComponent<DotComponentProps> = (
@@ -16,9 +17,9 @@ const Dot: React.StatelessComponent<DotComponentProps> = (
 ) => (
   <div>
     <div>
-      {i18n.t('Dots')}: <span className="Dot">{props.state.dots}</span>
+      {props.t('Dots')}: <span className="Dot">{props.state.dots}</span>
     </div>
-    <button onClick={props.actions.add}>{i18n.t('Add')}</button>
+    <button onClick={props.actions.add}>{props.t('Add')}</button>
   </div>
 );
 
